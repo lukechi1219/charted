@@ -180,8 +180,8 @@ void main() {
   var t = bars.transition();
   t.duration(1000);
   t.delayWithCallback((d, i, c) => i * 200);
-  t.attrTween('y', (num d, i, attr) => createStringInterpolator(
-      attr, (350 - d).toString()));
+  t.attrTween('y', (d, i, attr) => createStringInterpolator(
+      attr, (350 - (d as num)).toString()));
   t.attrTween('height', (d, i, attr) => createStringInterpolator(attr, d.toString()));
 
   var color = t.transition();
