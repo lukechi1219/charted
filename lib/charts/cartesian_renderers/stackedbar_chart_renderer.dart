@@ -286,7 +286,7 @@ class StackedBarChartRenderer extends CartesianRendererBase {
       rowIndex++;
     });
 
-    return new Extent(min, max);
+    return new Extent<num>(min, max);
   }
 
   @override

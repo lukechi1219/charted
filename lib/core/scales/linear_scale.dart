@@ -75,7 +75,7 @@ class LinearScale implements Scale {
 
   @override
   set domain(Iterable value) {
-    _domain = value;
+    _domain = value.cast<num>();
     _reset(nice: _nice);
   }
 

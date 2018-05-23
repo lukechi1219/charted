@@ -170,7 +170,7 @@ class StackedLineChartRenderer extends CartesianRendererBase {
       if (line < min) min = line;
     });
 
-    return new Extent(min, max);
+    return new Extent<num>(min, max);
   }
 
   @override

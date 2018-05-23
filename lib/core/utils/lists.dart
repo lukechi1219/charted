@@ -43,13 +43,13 @@ class Extent<T extends Comparable> extends Pair<T, T> {
 
   factory Extent.items(Iterable<T> items,
       [Comparator<T> compare = Comparable.compare]) {
-    if (items.length == 0) return new Extent(null, null);
-    var max = items.first, min = items.first;
-    for (var value in items) {
+    if (items.length == 0) return new Extent<T>(null, null);
+    T max = items.first, min = items.first;
+    for (T value in items) {
       if (compare(max, value) < 0) max = value;
       if (compare(min, value) > 0) min = value;
     }
-    return new Extent(min, max);
+    return new Extent<T>(min, max);
   }
 
   const Extent(T min, T max)

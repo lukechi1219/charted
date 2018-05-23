@@ -116,7 +116,7 @@ class BubbleChartRenderer extends CartesianRendererBase {
         if (row[idx] < min) min = row[idx];
       });
     });
-    return new Extent(min, max);
+    return new Extent<num>(min, max);
   }
 
   @override

@@ -102,7 +102,7 @@ abstract class CartesianRendererBase implements CartesianRenderer {
       max = 0;
       min = 0;
     }
-    return new Extent(min, max);
+    return new Extent<num>(min, max);
   }
 
   @override
@@ -122,7 +122,7 @@ abstract class CartesianRendererBase implements CartesianRenderer {
         }
       }
     }
-    return new Extent(min, max);
+    return new Extent<num>(min, max);
   }
 
   @override
