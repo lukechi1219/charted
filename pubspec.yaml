@@ -7,18 +7,17 @@ authors:
 description: Visualization toolkit for Dart - Provides D3 (http://d3js.org) like Selection API, utilities to achieve data driven DOM and an easy-to-use Charting library based on the Selection API.
 homepage: https://github.com/google/charted
 environment:
-  sdk: ">=1.23.0 <2.0.0"
+  sdk: ">=1.23.0 <=2.0.0-dev.55.0"
 dependencies:
   browser: any
   intl: any
   logging: any
-  observable: '>=0.14.0 <0.15.0'
+  observable: '>=0.21.0 <=0.22.1+2'
   quiver: any
 dev_dependencies:
+  build_runner: ^0.8.8
+  build_test: ^0.10.2
+  build_web_compilers: '>=0.3.6 <0.5.0'
   hop: '>=0.27.0'
   http: any
   unittest: any
-transformers:
-- $dart2js:
-    minify: true
-    commandLineOptions: [--trust-type-annotations, --trust-primitives]
